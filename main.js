@@ -14,11 +14,36 @@ let platformStatements = {
     healthcare: "",
     crime: ""
 }
-function changePlatformStatement (taxes){
+
+function changePlatformStatementTaxes (taxes){
     platformStatements.taxes = taxes
 }
-changePlatformStatement ("we need lower taxes")
+changePlatformStatementTaxes ("we need lower taxes")
 console.log(platformStatements.taxes)
+
+function changePlatformStatementJobs (jobs){
+    platformStatements.jobs = jobs
+}
+changePlatformStatementJobs ("we need better jobs")
+console.log(platformStatements.jobs)
+
+function changePlatformInfrastructure (infrastructure){
+    platformStatements.infrastructure = infrastructure
+}
+changePlatformInfrastructure ("we need better infrastructure")
+console.log(platformStatements.infrastructure)
+
+function changeHealthcare (healthcare){
+    platformStatements.healthcare = healthcare
+}
+changeHealthcare ("we need more affordable healthcare")
+console.log(platformStatements.healthcare)
+
+function changeCrime (crime){
+    platformStatements.crime = crime
+}
+changeCrime ("we need lower crime rates")
+console.log(platformStatements.crime)
 
 
 let DonationForm = {
