@@ -1,3 +1,6 @@
+// book 2 chap 9 Objects
+// Practice and Challenge
+
 const Elizabeth = {
     district: "5th"
 } 
@@ -152,6 +155,8 @@ function changeCareer(career){
 changeCareer("Elizabeth has 20 years of policy experience")
 console.log(biography.career)
 
+// need to finish my functions for the rest
+
 let imageGallery = {
     headShot: "",
     pictureOfFamily: "",
@@ -167,4 +172,54 @@ let missionStatement = {
 let registerToVote = {
     voteUrl: "", 
 }
+
+// may want to create an array for volunteers and events so you can have many different items for each.
+
+// function for chaning image gallery
+// changeImageGallery(elizabethSanger, "headshot", "newImage")
+
+// const changeImageGallery=  (politiicianObject, properyToChange, nestedProperyToChange, newValue) 
+
+// const logActivities = (politicianObject, propertyToChange, volunteerProperty) => {
+//     const volunteers = elizabethSanger[propertyToChange]
+// ]
+
+// for(let i = 0; i<volunteers.length; i++) {
+//     console.log(volunteers[i].activities);
+// }
+// logActivities(elizabethSanger, "volunteers, "activities", "riding bikes")
+console.log(elizabethSanger.volunteers);
+
+
+let lizArticle = document.createElement("article")
+lizArticle.setAttribute("id", elizabethSanger.congressionalDistrict)
+
+const divRef = document.queryselector("#content-container")
+divRef.appendChild(lizArticle)
+
+
+// this is how you do the challenge 
+let psUlRef = document.createElement("ul")
+
+const platformStatments = elizabethSanger.platformStatements
+for(let ps in platformStatements){
+    let liRef = document.createElement("li")
+    liRef.textContent = `${ps}: ${platformStatements[ps]}`
+    psUlRef.appendChild(liRef)
+}
+
+lizArticle.appendChild(psUlRef)
+
+// this is how you would loop through an image gallery
+
+let imgSection = document.createElement("section")
+
+const imageGallery = elizabethSanger.imageGallery
+for(let image in imageGallery){
+    let imgRef = document.createElement("img")
+    imgRef.setAttribute("src", imageGallery[image])
+    imgSection.appendChild(imgRef)
+}
+
+// lizArticle.appendChild() what goes in the parenthesis-look over this
 
